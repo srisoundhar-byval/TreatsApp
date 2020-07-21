@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:id="@+id/layout_background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="45dp"
+                android:text="    LOGIN"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_login_paddingLeft"
+            android:paddingRight="@dimen/activity_login_paddingRight">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_circleView"
+                android:layout_width="550dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/login_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/treats_restaurant_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/logo"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/activity_login_card_padding"
+                        android:layout_marginLeft="@dimen/activity_login_card_padding">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/edtTxt_Username_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="clear_text"
+                            app:errorEnabled="true">
+
+                            <EditText
+                                android:id="@+id/edtTxt_Username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/activity_login_edtxt_drawable_padding"
+                                android:fontFamily="@font/googlesansregular"
+                                android:hint="User Name"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:textSize="@dimen/hint_text_size" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/edtTxt_password_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="password_toggle"
+                            app:errorEnabled="true">
+
+                            <EditText
+                                android:id="@+id/edtTxt_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_login_edtxt_margin_top"
+                                android:drawablePadding="@dimen/activity_login_edtxt_drawable_padding"
+                                android:fontFamily="@font/googlesansregular"
+                                android:hint="@string/Password"
+                                android:inputType="textPassword"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:scrollHorizontally="true"
+                                android:textSize="@dimen/hint_text_size" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+
+    android:text="Forgot Password?"/></RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/mLoginButton"
+                                android:layout_width="wrap_content"
+                                android:background="@drawable/black_button"
+                                android:layout_centerHorizontal="true"
+                                android:padding="15dp"
+                                android:clickable="true"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/hint_text_size"
+                                    android:text="  Login  "/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
